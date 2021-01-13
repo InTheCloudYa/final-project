@@ -1,17 +1,40 @@
 class Game{
-    field int time;
     field Array zombies; 
-    static int rows;
+    static int rows; //constant
 
-    constructor Game new(){
+    constructor Game new(int time){
         var int i;
         let rows = 8; //constant
-        zombies = Array.new(rows);
+        let zombies = Array.new(rows);
         let i = rows - 1 ;
         while(i >= 0){
-            let Zombie.new(i);
+            let zombies[i] = Zombie.new(i,time);
             let i = i - 1;
-            let zombies[i]
+        }
+        return;
+    }
+    function boolean pressRight(int i){
+        //todo,keyboard
+    }
+    method void play(){
+        var int time,i;
+        let time = 10000;
+        let i = rows-1;
+        while (time >= 0){
+            if (pressRight(zombies[rows-1].column)){ //column saves 1,2,3
+                while (i>0){
+                    let zombies[i] = zombies[i-1];
+                    i = i - 1;
+                let zombies[0] = Zombie.new(0,time);
+                }
+                
+                do Ui.clear();
+                do Ui.drawZombie(zombies);
+            }
+            //todo
+            do Sys.wait(3);
+            let time = time - 1 ;
         }
     }
+
 }
