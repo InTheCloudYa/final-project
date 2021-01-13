@@ -1,0 +1,22 @@
+class Ui(){
+    function void drawframe(){
+        //draw frame
+        //draw button
+        return;
+    }
+
+    function void drawZombie(array list){
+        //to do
+        return;
+    }
+
+    function void clear(){
+        //draw white rectangle
+        return;
+    }
+
+    function void drawStart(){
+        return;
+    }
+
+}
