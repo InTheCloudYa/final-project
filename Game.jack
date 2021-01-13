@@ -1,0 +1,17 @@
+class Game{
+    field int time;
+    field Array zombies; 
+    static int rows;
+
+    constructor Game new(){
+        var int i;
+        let rows = 8; //constant
+        zombies = Array.new(rows);
+        let i = rows - 1 ;
+        while(i >= 0){
+            let Zombie.new(i);
+            let i = i - 1;
+            let zombies[i]
+        }
+    }
+}
