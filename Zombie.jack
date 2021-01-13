@@ -1,3 +1,13 @@
-class Zombie {
-    
+class Zombie{
+    field int row, column; 
+    constructor Zombie new(int r){
+        let this.row = r;
+        let column = random();
+    }
+
+    function int random(){
+        //todo
+        return 0;
+    }
+
 }
