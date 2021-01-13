@@ -1,6 +1,23 @@
 class Main{
     function void main(){
-        do Output.println("hi");
+        do Ui.drawFrame();
+        
+        var int time;
+        let time = 0
+        var boolean keyPressed;
+        let keyPressed = false;
+        var Game newGame;
+        while(True){
+            do Ui.drwawStart();
+            while(keyPressed == false){
+                //detect keyboard
+                time = time + 1
+            }
+            do Ui.clear()
+            newGame = Game.new(time);   
+        }
+       
+
         return;
     }
 }
