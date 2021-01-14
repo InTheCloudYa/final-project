@@ -4,6 +4,7 @@ class Zombie{
     constructor Zombie new(int time){
         let range = 3;
         let column = Zombie.random(time);
+        return this;
     }
 
     function int mod(int x){
