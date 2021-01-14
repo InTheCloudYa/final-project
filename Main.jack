@@ -1,16 +1,17 @@
 class Main{
     function void main(){
         do Ui.drawFrame();
-        
         var int time;
         var boolean keyPressed;
         var Game newGame;
-        while(True){
+        while(true){
             do Ui.drwawStart();
             let time = 0;
             let keyPressed = false;
-            while(keyPressed == false){
-                //detect keyboard
+            while(keyPressed = false){
+                if(KeyBoard.keyPressed() > 0){
+                    let KeyPressed = true;
+                } 
                 let time = time + 1
             }
             do Ui.clear()
