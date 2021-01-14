@@ -12,9 +12,9 @@ class Main{
                 if(KeyBoard.keyPressed() > 0){
                     let keyPressed = true;
                 } 
-                let time = time + 1
+                let time = time + 1;
             }
-            do Ui.clear()
+            do Ui.clear();
             let newGame = Game.new(time);
             do newGame.dispose();
         }
