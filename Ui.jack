@@ -13,11 +13,10 @@ class Ui{
     }
 
     function void drawZombie(Array list){
+        var int i,x,y;
         do Screen.setColor(true);
-        var int i;
         let i = 0;
-        While(i < 8){
-            var int x,y;
+        while(i < 8){
             let x = 190+(list[i].column*45);
             let y = 9+Math.multiply(i,25);
             do Screen.drawRectangle(x,y,x+37,y+24);
