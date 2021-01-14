@@ -1,4 +1,4 @@
-class Ui(){
+class Ui{
     function void drawframe(){
         do Screen.setColor(true);
         //draw Frame
