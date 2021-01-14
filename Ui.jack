@@ -14,14 +14,14 @@ class Ui(){
 
     function void drawZombie(Array list){
         Screen.setColor(true);
-        Screen,drawRectangle(190+list[0].column*45,9)
-        Screen,drawRectangle(190+list[1].column*45,9+25)
-        Screen,drawRectangle(190+list[2].column*45,9+50)
-        Screen,drawRectangle(190+list[3].column*45,9+75)
-        Screen,drawRectangle(190+list[4].column*45,9+100)
-        Screen,drawRectangle(190+list[5].column*45,9+125)
-        Screen,drawRectangle(190+list[6].column*45,9+150)
-        Screen,drawRectangle(190+list[7].column*45,9+175)
+        Screen.drawRectangle(190+list[0].column*45,9);
+        Screen.drawRectangle(190+list[1].column*45,9+25);
+        Screen.drawRectangle(190+list[2].column*45,9+50);
+        Screen.drawRectangle(190+list[3].column*45,9+75);
+        Screen.drawRectangle(190+list[4].column*45,9+100);
+        Screen.drawRectangle(190+list[5].column*45,9+125);
+        Screen.drawRectangle(190+list[6].column*45,9+150);
+        Screen.drawRectangle(190+list[7].column*45,9+175);
         return;
     }
 
