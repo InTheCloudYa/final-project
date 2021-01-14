@@ -15,10 +15,9 @@ class Main{
                 let time = time + 1
             }
             do Ui.clear()
-            let newGame = Game.new(time);   
+            let newGame = Game.new(time);
+            do newGame.dispose();
         }
-       
-
         return;
     }
 }
