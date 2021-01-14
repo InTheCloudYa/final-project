@@ -13,11 +13,14 @@ class Ui{
     }
 
     function void drawZombie(Array list){
-        var int i,x,y;
+        var int i,x,y,col;
+        var Zombie zom; 
         do Screen.setColor(true);
         let i = 0;
         while(i < 8){
-            let x = 190+(list[i].column*45);
+            let zom = list[i];
+            let col = zom.getColumn();
+            let x = 190 + (Math.multiply(col,45));
             let y = 9+Math.multiply(i,25);
             do Screen.drawRectangle(x,y,x+37,y+24);
             let i = i + 1;
@@ -32,6 +35,11 @@ class Ui{
     }
 
     function void drawStart(){
+        do Screen.setColor(false);
+        do Screen.drawRectangle(196,84,323,108);
+        do Screen.setColor(true);
+        do Output.moveCursor(196,84,323,108);
+        do Output.printString("Press any key to start");
         return;
     }
 
