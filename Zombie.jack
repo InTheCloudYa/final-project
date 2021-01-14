@@ -18,6 +18,11 @@ class Zombie{
     function int random(int t){
         return Zombie.mod(t)+1;
     }
+
+    function void jump(){
+        //todo
+        return;
+    }
     
     method void dispose() {
         do Memory.deAlloc(this);
