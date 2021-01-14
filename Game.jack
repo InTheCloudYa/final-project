@@ -7,34 +7,53 @@ class Game{
         let rows = 8; //constant
         let zombies = Array.new(rows);
         let i = rows - 1 ;
-        while(i >= 0){
-            let zombies[i] = Zombie.new(i,time);
+        while(i > 0 | i = 0){
+            let zombies[i] = Zombie.new(time);
             let i = i - 1;
         }
-        return;
+        return this;
     }
-    function boolean pressRight(int i){
-        //todo,keyboard
+    function boolean pressRight(Char p,int i,int time){
+        var Char key;
+        let key = Keyboard.keyPressed();
+        if (key > 0){
+            if ((~(p=key)) & ((i = 1 & key = 130) | (i = 2 & key = 133) | (i = 3 & key = 132))) { 
+                return true;
+            }
+            else { 
+                do Zombie.jump(); //todo func
+                return false;
+            }
+        }
+        else { return false; }
     }
     method void play(){
-        var int time,i;
+        var int time,i,ls; //ls=last second
+        var boolean pr; //pr=press right
+        var Char lk; //lk=last key 
         let time = 10000;
         let i = rows-1;
-        while (time >= 0){
-            if (pressRight(zombies[rows-1].column)){ //column saves 1,2,3
+        let lk = 0;
+        while (time > 0 | time = 0){
+            let pr = Game.pressRight(lk,zombies[rows-1].column,time);
+            if (pr){ //column saves 1,2,3
                 while (i>0){
+                    do zombies[rows-1].dispose();
                     let zombies[i] = zombies[i-1];
-                    i = i - 1;
-                let zombies[0] = Zombie.new(0,time);
+                    let i = i - 1;
+                    let zombies[0] = Zombie.new(0,time);
                 }
-                
                 do Ui.clear();
                 do Ui.drawZombie(zombies);
             }
-            //todo
+            let lk = Keyboard.keyPressed();
             do Sys.wait(3);
             let time = time - 1 ;
         }
+        return;
     }
-
+    method void dispose(){
+        do Memory.deAlloc(this);
+        return;
+    }
 }
