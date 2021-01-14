@@ -3,9 +3,9 @@ class Ui(){
         Screen.setColor(true);
         //draw Frame
         Screen.drawLine(184,9,323,9);
-        Screen.drawLine(184,9,184,218);
-        Screen.drawLine(323,218,323,9);
-        Screen.drawLine(323,218,184,218);
+        Screen.drawLine(184,9,184,243);
+        Screen.drawLine(323,243,323,9);
+        Screen.drawLine(323,243,184,243);
         //draw button
         setButton(true);
         
@@ -13,19 +13,21 @@ class Ui(){
     }
 
     function void drawZombie(Array list){
-        Screen,drawRectangle(190+list[0].column*45,13)
-        Screen,drawRectangle(190+list[1].column*45,13+25)
-        Screen,drawRectangle(190+list[2].column*45,13+50)
-        Screen,drawRectangle(190+list[3].column*45,13+75)
-        Screen,drawRectangle(190+list[4].column*45,13+100)
-        Screen,drawRectangle(190+list[5].column*45,13+125)
-        Screen,drawRectangle(190+list[6].column*45,13+150)
-        Screen,drawRectangle(190+list[7].column*45,13+175)
+        Screen.setColor(true);
+        Screen,drawRectangle(190+list[0].column*45,9)
+        Screen,drawRectangle(190+list[1].column*45,9+25)
+        Screen,drawRectangle(190+list[2].column*45,9+50)
+        Screen,drawRectangle(190+list[3].column*45,9+75)
+        Screen,drawRectangle(190+list[4].column*45,9+100)
+        Screen,drawRectangle(190+list[5].column*45,9+125)
+        Screen,drawRectangle(190+list[6].column*45,9+150)
+        Screen,drawRectangle(190+list[7].column*45,9+175)
         return;
     }
 
     function void clear(){
-        //draw white rectangle
+        Screen.setColor(false);
+        Screen.drawRectangle(190,9,317,240);
         return;
     }
 
