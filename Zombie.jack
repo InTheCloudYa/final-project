@@ -1,9 +1,8 @@
 class Zombie{
     field int column;
     static int range; 
-    constructor Zombie new(int r, int time){
+    constructor Zombie new(int time){
         let range = 3;
-        let this.row = r;
         let column = random(time);
     }
 
