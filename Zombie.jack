@@ -28,4 +28,8 @@ class Zombie{
         do Memory.deAlloc(this);
         return; 
     }
+    
+    method int getColumn(){
+        return column;
+    }
 }
