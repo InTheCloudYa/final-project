@@ -13,7 +13,7 @@ class Game{
         }
         return this;
     }
-    function boolean pressRight(Char p,int i,int time){
+    function boolean pressRight(Char p,int i,int time,Zombie zom){
         var Char key;
         let key = Keyboard.keyPressed();
         if (key > 0){
@@ -21,7 +21,8 @@ class Game{
                 return true;
             }
             else { 
-                do Zombie.jump(); //todo func
+                do zom.jump();
+                let time = time - 3; //todo func
                 return false;
             }
         }
@@ -38,14 +39,14 @@ class Game{
         while (time > 0 | time = 0){
             let zom = zombies[rows-1];
             let col = zom.getColumn();
-            let pr = Game.pressRight(lk,col,time);
+            let pr = Game.pressRight(lk,col,time,zom);
             do Ui.setButton(~pr);
             if (pr){ //column saves 1,2,3
                 while (i>0){
                     do zom.dispose(); //!!!
                     let zombies[i] = zombies[i-1];
                     let i = i - 1;
-                    let zombies[0] = Zombie.new(0,time);
+                    let zombies[0] = Zombie.new(time);
                 }
                 do Ui.clear();
                 do Ui.drawZombie(zombies);
