@@ -11,10 +11,10 @@ class Main{
             let keyPressed = false;
             while(keyPressed == false){
                 //detect keyboard
-                time = time + 1
+                let time = time + 1
             }
             do Ui.clear()
-            newGame = Game.new(time);   
+            let newGame = Game.new(time);   
         }
        
 
