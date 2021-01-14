@@ -1,60 +1,50 @@
-class Game{
-    field Array zombies; 
-    static int rows; //constant
+class Ui{
+    function void drawframe(){
+        do Screen.setColor(true);
+        //draw Frame
+        do Screen.drawLine(184,9,323,9);
+        do Screen.drawLine(184,9,184,243);
+        do Screen.drawLine(323,243,323,9);
+        do Screen.drawLine(323,243,184,243);
+        //draw button
+        do Ui.setButton(true);
+        
+        return;
+    }
 
-    constructor Game new(int time){
-        var int i;
-        let rows = 8; //constant
-        let zombies = Array.new(rows);
-        let i = rows - 1 ;
-        while(i > 0 | i = 0){
-            let zombies[i] = Zombie.new(time);
-            let i = i - 1;
-        }
-        return this;
-    }
-    function boolean pressRight(Char p,int i,int time){
-        var Char key;
-        let key = Keyboard.keyPressed();
-        if (key > 0){
-            if ((~(p=key)) & ((i = 1 & key = 130) | (i = 2 & key = 133) | (i = 3 & key = 132))) { 
-                return true;
-            }
-            else { 
-                do Zombie.jump(); //todo func
-                return false;
-            }
-        }
-        else { return false; }
-    }
-    method void play(){
-        var int time,i,ls; //ls=last second
-        var boolean pr; //pr=press right
-        var Char lk; //lk=last key 
-        let time = 10000;
-        let i = rows-1;
-        let lk = 0;
-        while (time > 0 | time = 0){
-            let pr = Game.pressRight(lk,zombies[rows-1].getColumn(),time);
-            do Ui.setButton(~pr);
-            if (pr){ //column saves 1,2,3
-                while (i>0){
-                    do zombies[rows-1].dispose();
-                    let zombies[i] = zombies[i-1];
-                    let i = i - 1;
-                    let zombies[0] = Zombie.new(0,time);
-                }
-                do Ui.clear();
-                do Ui.drawZombie(zombies);
-            }
-            let lk = Keyboard.keyPressed();
-            do Sys.wait(3);
-            let time = time - 1 ;
+    function void drawZombie(Array list){
+        var int i,x,y,col;
+        var Zombie zom; 
+        do Screen.setColor(true);
+        let i = 0;
+        while(i < 8){
+            let zom = list[i];
+            let col = zom.getColumn();
+            let x = 190 + (Math.multiply(col,45));
+            let y = 9+Math.multiply(i,25);
+            do Screen.drawRectangle(x,y,x+37,y+24);
+            let i = i + 1;
         }
         return;
     }
-    method void dispose(){
-        do Memory.deAlloc(this);
+
+    function void clear(){
+        do Screen.setColor(false);
+        do Screen.drawRectangle(190,9,317,240);
         return;
     }
+
+    function void drawStart(){
+        do Screen.setColor(false);
+        do Screen.drawRectangle(196,84,323,108);
+        do Screen.setColor(true);
+        do Output.moveCursor(196,84,323,108);
+        do Output.printString("Press any key to start");
+        return;
+    }
+
+    function void setButton(boolean color){
+        return;
+    }
+
 }
