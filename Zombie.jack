@@ -19,8 +19,9 @@ class Zombie{
         return Zombie.mod(t)+1;
     }
 
-    function void jump(){
-        //todo
+    method void jump(){
+        //wrong animation
+        do Sys.wait(300);
         return;
     }
     
