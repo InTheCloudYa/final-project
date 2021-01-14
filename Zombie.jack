@@ -1,5 +1,5 @@
 class Zombie{
-    field int row, column;
+    field int column;
     static int range; 
     constructor Zombie new(int r, int time){
         let range = 3;
@@ -7,13 +7,16 @@ class Zombie{
         let column = random(time);
     }
 
+    function int mod(int x){
+        var int a,b,c;
+        let a = Math.divide(x,range);
+        let b = Math.multiply(a,range);
+        let c = x - b;
+        return c;
+    }
+
     function int random(int t){
-        var int ans;
-        let ans = 0
-        while(ans <= range){
-            let ans = 
-        }
-        return ans;
+        return Main.mod(t)+1;
     }
 
 }
