@@ -1,11 +1,18 @@
 class Ui(){
     function void drawframe(){
-        //draw frame
+        Screen.setColor(true);
+        //draw Frame
+        Screen.drawLine(184,9,323,9);
+        Screen.drawLine(184,9,184,218);
+        Screen.drawLine(323,218,323,9);
+        Screen.drawLine(323,218,184,218);
         //draw button
+        setButton(true);
+        
         return;
     }
 
-    function void drawZombie(array list){
+    function void drawZombie(Array list){
         //to do
         return;
     }
@@ -16,6 +23,10 @@ class Ui(){
     }
 
     function void drawStart(){
+        return;
+    }
+
+    function void setButton(boolean color){
         return;
     }
 
