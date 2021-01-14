@@ -3,7 +3,7 @@ class Zombie{
     static int range; 
     constructor Zombie new(int time){
         let range = 3;
-        let column = random(time);
+        let column = Zombie.random(time);
     }
 
     function int mod(int x){
@@ -15,7 +15,7 @@ class Zombie{
     }
 
     function int random(int t){
-        return Main.mod(t)+1;
+        return Zombie.mod(t)+1;
     }
 
 }
