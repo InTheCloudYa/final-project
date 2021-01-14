@@ -36,6 +36,7 @@ class Game{
         let lk = 0;
         while (time > 0 | time = 0){
             let pr = Game.pressRight(lk,zombies[rows-1].column,time);
+            do Ui.setButton(~(pr));
             if (pr){ //column saves 1,2,3
                 while (i>0){
                     do zombies[rows-1].dispose();
