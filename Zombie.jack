@@ -1,13 +1,19 @@
 class Zombie{
-    field int row, column; 
-    constructor Zombie new(int r){
+    field int row, column;
+    static int range; 
+    constructor Zombie new(int r, int time){
+        let range = 3;
         let this.row = r;
-        let column = random();
+        let column = random(time);
     }
 
-    function int random(){
-        //todo
-        return 0;
+    function int random(int t){
+        var int ans;
+        let ans = 0
+        while(ans <= range){
+            let ans = 
+        }
+        return ans;
     }
 
 }
