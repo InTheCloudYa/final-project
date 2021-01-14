@@ -1,33 +1,34 @@
 class Ui(){
     function void drawframe(){
-        Screen.setColor(true);
+        do Screen.setColor(true);
         //draw Frame
-        Screen.drawLine(184,9,323,9);
-        Screen.drawLine(184,9,184,243);
-        Screen.drawLine(323,243,323,9);
-        Screen.drawLine(323,243,184,243);
+        do Screen.drawLine(184,9,323,9);
+        do Screen.drawLine(184,9,184,243);
+        do Screen.drawLine(323,243,323,9);
+        do Screen.drawLine(323,243,184,243);
         //draw button
-        setButton(true);
+        do Ui.setButton(true);
         
         return;
     }
 
     function void drawZombie(Array list){
-        Screen.setColor(true);
-        Screen.drawRectangle(190+list[0].column*45,9);
-        Screen.drawRectangle(190+list[1].column*45,9+25);
-        Screen.drawRectangle(190+list[2].column*45,9+50);
-        Screen.drawRectangle(190+list[3].column*45,9+75);
-        Screen.drawRectangle(190+list[4].column*45,9+100);
-        Screen.drawRectangle(190+list[5].column*45,9+125);
-        Screen.drawRectangle(190+list[6].column*45,9+150);
-        Screen.drawRectangle(190+list[7].column*45,9+175);
+        do Screen.setColor(true);
+        var int i;
+        let i = 0;
+        While(i < 8){
+            var int x,y;
+            let x = 190+(list[i].column*45);
+            let y = 9+Math.multiply(i,25);
+            do Screen.drawRectangle(x,y,x+37,y+24);
+            let i = i + 1;
+        }
         return;
     }
 
     function void clear(){
-        Screen.setColor(false);
-        Screen.drawRectangle(190,9,317,240);
+        do Screen.setColor(false);
+        do Screen.drawRectangle(190,9,317,240);
         return;
     }
 
