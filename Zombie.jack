@@ -1,9 +1,9 @@
 class Zombie{
     field int column;
     static int range; 
-    constructor Zombie new(int time){
+    constructor Zombie new(int time,int i){
         let range = 3;
-        let column = Zombie.random(time);
+        let column = Zombie.random(time,i);
         return this;
     }
 
@@ -15,9 +15,9 @@ class Zombie{
         return c;
     }
 
-    function int random(int t){
-        let t = Math.abs(t);
-        return Zombie.mod(t)+1;
+    function int random(int t,int i){
+        let t = Math.abs(t); //todo
+        return Zombie.mod(t); //todo
     }
 
     method void jump(){
