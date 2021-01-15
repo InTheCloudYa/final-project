@@ -10,7 +10,7 @@ class Main{
             let time = 0;
             let keyPressed = false;
             while(~keyPressed){
-                let key = keyBoard.keyPressed();
+                let key = Keyboard.keyPressed();
                 if(key>0){
                     let keyPressed = true;
                 } 
