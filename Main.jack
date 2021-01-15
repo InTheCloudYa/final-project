@@ -3,18 +3,21 @@ class Main{
         var int time;
         var boolean keyPressed;
         var Game newGame;
+        var Char key;
         do Ui.drawFrame();
         while(true){
             do Ui.drawStart();
             let time = 0;
             let keyPressed = false;
             while(~keyPressed){
-                if(KeyBoard.keyPressed() > 0){
+                let key = keyBoard.keyPressed();
+                if(key>0){
                     let keyPressed = true;
                 } 
                 let time = time + 1;
             }
             do Ui.clear();
+            do Ui.drawFrame();
             let newGame = Game.new(time);
             do newGame.dispose();
         }
