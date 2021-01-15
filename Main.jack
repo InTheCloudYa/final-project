@@ -5,7 +5,7 @@ class Main{
         var Game newGame;
         do Ui.drawFrame();
         while(true){
-            do Ui.drwawStart();
+            do Ui.drawStart();
             let time = 0;
             let keyPressed = false;
             while(~keyPressed){
