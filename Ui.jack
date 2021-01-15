@@ -122,7 +122,8 @@ class Ui{
         
     }
     
-    function void drawDog(int initx,int inity){
+    function void drawDog(int x,int y){
+        do Screen.setColor(true);
         do Screen.drawRectangle(x,y,x+37,y+24);
         return;
     }
