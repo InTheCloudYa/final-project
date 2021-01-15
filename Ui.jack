@@ -44,7 +44,7 @@ class Ui{
         return;
     }
 
-    function void setButton(boolean color){
+    function void setButton(boolean color, int column){
         do Screen.setColor(color);
         
         /*button frame*/
