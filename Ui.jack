@@ -7,8 +7,9 @@ class Ui{
         do Screen.drawLine(323,243,323,9);
         do Screen.drawLine(323,243,184,243);
         //draw button
-        do Ui.setButton(true);
-        
+        do Ui.setButton(true,1);
+        do Ui.setButton(true,2);
+        do Ui.setButton(true,3);
         return;
     }
 
@@ -30,15 +31,15 @@ class Ui{
 
     function void clear(){
         do Screen.setColor(false);
-        do Screen.drawRectangle(190,9,317,240);
+        do Screen.drawRectangle(132,84,323,108);
         return;
     }
 
     function void drawStart(){
         do Screen.setColor(false);
-        do Screen.drawRectangle(196,84,323,108);
+        do Screen.drawRectangle(132,84,323,108);
         do Screen.setColor(true);
-        do Output.moveCursor(196,84,323,108);
+        do Output.moveCursor(8,21);
         do Output.printString("Press any key to start");
         return;
     }
@@ -46,7 +47,7 @@ class Ui{
     function void setButton(boolean color){
         do Screen.setColor(color);
         
-        /*按鈕框框*/
+        /* button frame */
         do Screen.drawRectangle(190,210,227,240);
         do Screen.drawRectangle(235,210,272,240);
         do Screen.drawRectangle(280,210,317,240);
@@ -56,7 +57,7 @@ class Ui{
         do Screen.drawRectangle(236,211,271,239);
         do Screen.drawRectangle(281,211,316,239);
         
-        do Screen.setColor(~color);
+        do Screen.setColor(color);
         /* LEFT ARROW */
         do Screen.drawRectangle(13+190,224,30+190,226);
         do Screen.drawLine(16+190,217,8+190,225);
@@ -82,7 +83,7 @@ class Ui{
         do Screen.drawPixel(19+235,21+210);
 
 
-        /* RIGHT ARROW*/
+        /* RIGHT ARROW */
         do Screen.drawRectangle(8+280,14+210,26+280,16+210);
         do Screen.drawLine(23+280,7+210,31+280,15+210);
         do Screen.drawLine(23+280,8+210,30+280,15+210);
