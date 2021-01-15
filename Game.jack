@@ -11,7 +11,6 @@ class Game{
             let zombies[i] = Zombie.new(time);
             let i = i - 1;
         }
-        do play();
         return this;
     }
     function boolean pressRight(Char p,int i,int time,Zombie zom){
@@ -28,7 +27,7 @@ class Game{
             }
             else { 
                 do zom.jump();
-                let time = time - 100;
+                let time = time - 200;
                 return false;
             }
         }
@@ -42,12 +41,13 @@ class Game{
         let time = 10000;
         let i = rows-1;
         let lk = 0;
-        while (time > 0 | time = 0){
+        while (time > 0){
             let zom = zombies[rows-1];
             let col = zom.getColumn();
             let pr = Game.pressRight(lk,col,time,zom);
             if (pr){ //column saves 1,2,3
                 while (i>0){
+                    do zom.disposeColumn();
                     do zom.dispose(); //!!!
                     let zombies[i] = zombies[i-1];
                     let i = i - 1;
