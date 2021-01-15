@@ -16,18 +16,18 @@ class Zombie{
     }
 
     function int random(int t){
+        let t = Math.abs(t);
         return Zombie.mod(t)+1;
     }
 
     method void jump(){
         var int x,y,col;
+        let col = getColumn();
+        let x= 190 + (col*45);
+        let y=210-26;
         //clear
         do Screen.setColor(false);
         do Screen.drawRectangle(x,y,x+37,y+24);
-        
-        let col = getColumn();
-        let x=190 + col*45;
-        let y=210-26;
         do Screen.setColor(true);
         do Screen.drawRectangle(22+x,17+y,25+x,19+y);
         do Screen.setColor(false);
@@ -85,11 +85,11 @@ class Zombie{
         do Screen.drawPixel(26+x,10+y);
         do Screen.drawPixel(26+x,12+y);
         do Screen.drawPixel(22+x,12+y);
-        do Sys.wait(300);
+        do Sys.wait(600);
         //clear
         do Screen.setColor(false);
         do Screen.drawRectangle(x,y,x+37,y+24);
-        do Ui.drawDog();
+        do Ui.drawDog(x,y);
         return;
     }
     
@@ -100,5 +100,10 @@ class Zombie{
     
     method int getColumn(){
         return column;
+    }
+
+    method void disposeColumn(){
+        do Memory.deAlloc(column);
+        return;
     }
 }
