@@ -31,13 +31,13 @@ class Ui{
 
     function void clear(){
         do Screen.setColor(false);
-        do Screen.drawRectangle(132,84,323,108);
+        do Screen.drawRectangle(132,84,403,108);
         return;
     }
 
     function void drawStart(){
         do Screen.setColor(false);
-        do Screen.drawRectangle(132,84,323,108);
+        do Screen.drawRectangle(132,84,403,108);
         do Screen.setColor(true);
         do Output.moveCursor(8,21);
         do Output.printString("Press any key to start");
