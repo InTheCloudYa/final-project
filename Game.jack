@@ -11,6 +11,7 @@ class Game{
             let zombies[i] = Zombie.new(time);
             let i = i - 1;
         }
+        do play();
         return this;
     }
     function boolean pressRight(Char p,int i,int time,Zombie zom){
@@ -22,7 +23,7 @@ class Game{
             }
             else { 
                 do zom.jump();
-                let time = time - 3; //todo func
+                let time = time - 100;
                 return false;
             }
         }
@@ -40,7 +41,6 @@ class Game{
             let zom = zombies[rows-1];
             let col = zom.getColumn();
             let pr = Game.pressRight(lk,col,time,zom);
-            do Ui.setButton(~pr);
             if (pr){ //column saves 1,2,3
                 while (i>0){
                     do zom.dispose(); //!!!
