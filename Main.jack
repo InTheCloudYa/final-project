@@ -1,26 +1,28 @@
 class Main{
     function void main(){
-        var int time;
+        var int tim;
         var boolean keyPressed;
         var Game newGame;
         var Char key;
         do Ui.drawFrame();
-        while(true){
+        //while(true){
             do Ui.drawStart();
-            let time = 0;
-            let keyPressed = false;
+            let tim = 0;
+            let keyPressed = false; 
             while(~keyPressed){
                 let key = Keyboard.keyPressed();
                 if(key>0){
                     let keyPressed = true;
                 } 
-                let time = time + 1;
+                let tim = tim + 1;
             }
             do Ui.clear();
             do Ui.drawFrame();
-            let newGame = Game.new(time);
+            let newGame = Game.new(tim);
+            do newGame.play();
             do newGame.dispose();
-        }
+
+        //}
         return;
     }
 }
