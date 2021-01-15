@@ -36,15 +36,52 @@ class Ui{
 
     function void drawStart(){
         do Screen.setColor(false);
-        do Screen.drawRectangle(196,84,311,108);
+        do Screen.drawRectangle(196,84,323,108);
         do Screen.setColor(true);
-        do Output.moveCursor(216,96);
+        do Output.moveCursor(196,84,323,108);
         do Output.printString("Press any key to start");
         return;
     }
 
     function void setButton(boolean color){
+        do Screen.setColor(true);
+
+        /* LEFT ARROW */
+        do Screen.drawRectangle(13+190,224,30+190,226);
+        do Screen.drawLine(16+190,217,8+190,225);
+        do Screen.drawLine(16+190,218,9+190,225);
+        do Screen.drawLine(16+190,219,10+190,225);
+        do Screen.drawLine(16+190,220,11+190,225);
+        do Screen.drawLine(8+190,225,16+190,233);
+        do Screen.drawLine(9+190,225,16+190,232);
+        do Screen.drawLine(10+190,225,16+190,231);
+        do Screen.drawLine(11+190,225,16+190,230);
+        do Screen.drawPixel(12+190,225);
+
+        /* MIDDLE ARROW */
+        do Screen.drawRectangle(18+235,6+210,20+235,20+210);
+        do Screen.drawLine(12+235,18+210,19+235,25+210);
+        do Screen.drawLine(13+235,18+210,19+235,24+210);
+        do Screen.drawLine(14+235,18+210,19+235,23+210);
+        do Screen.drawLine(15+235,18+210,19+235,22+210);
+        do Screen.drawLine(19+235,22+210,23+235,18+210);
+        do Screen.drawLine(19+235,23+210,24+235,18+210);
+        do Screen.drawLine(19+235,24+210,25+235,18+210);
+        do Screen.drawLine(19+235,25+210,26+235,18+210);
+        do Screen.drawPixel(19+235,21+210);
+
+
+        /* RIGHT ARROW*/
+        do Screen.drawRectangle(8+280,14+210,26+280,16+210);
+        do Screen.drawLine(23+280,7+210,31+280,15+210);
+        do Screen.drawLine(23+280,8+210,30+280,15+210);
+        do Screen.drawLine(23+280,9+210,29+280,15+210);
+        do Screen.drawLine(23+280,10+210,28+280,15+210);
+        do Screen.drawLine(31+280,15+210,23+280,23+210);
+        do Screen.drawLine(30+280,15+210,23+280,22+210);
+        do Screen.drawLine(29+280,15+210,23+280,21+210);
+        do Screen.drawLine(28+280,15+210,23+280,20+210);
+        do Screen.drawPixel(27+280,15+210);
         return;
     }
-
 }
