@@ -7,9 +7,9 @@ class Ui{
         do Screen.drawLine(323,243,323,9);
         do Screen.drawLine(323,243,184,243);
         //draw button
-        do Ui.setButton(true,1);
+        do Ui.setButton(true,0);
+        do Ui.setButton(true,1);
         do Ui.setButton(true,2);
-        do Ui.setButton(true,3);
         return;
     }
 
@@ -23,7 +23,7 @@ class Ui{
             let col = zom.getColumn();
             let x = 190 + (Math.multiply(col,45));
             let y = 9+Math.multiply(i,25);
-            do Screen.drawRectangle(x,y,x+37,y+24);
+            do drawDog(x,y);
             let i = i + 1;
         }
         return;
@@ -121,4 +121,10 @@ class Ui{
         return;
         
     }
+    
+    function void drawDog(int initx,int inity){
+        do Screen.drawRectangle(x,y,x+37,y+24);
+        return;
+    }
+    
 }
