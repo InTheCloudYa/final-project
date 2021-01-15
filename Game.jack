@@ -18,6 +18,11 @@ class Game{
         var Char key;
         let key = Keyboard.keyPressed();
         if (key > 0){
+        
+            if key=130{setButton(false,1);}
+            if key=133{setbutton(false,2);}
+            if key=132{setbutton(false,3);}
+            
             if ((~(p=key)) & ((i = 1 & key = 130) | (i = 2 & key = 133) | (i = 3 & key = 132))) { 
                 return true;
             }
