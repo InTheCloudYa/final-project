@@ -47,15 +47,39 @@ class Ui{
     function void setButton(boolean color){
         do Screen.setColor(color);
         
-        /* button frame */
-        do Screen.drawRectangle(190,210,227,240);
-        do Screen.drawRectangle(235,210,272,240);
-        do Screen.drawRectangle(280,210,317,240);
+        /*button frame*/
+        if (column=0){
+            do Screen.drawRectangle(191,211,226,239);
+            do Screen.drawRectangle(235,210,272,240);
+            do Screen.drawRectangle(280,210,317,240);
+            
+            do Screen.setColor(~color);
+            do Screen.drawRectangle(190,210,227,240);
+            do Screen.drawRectangle(236,211,271,239);
+            do Screen.drawRectangle(281,211,316,239);
+        }
+        if (column=1){
+            do Screen.drawRectangle(190,210,227,240);
+            do Screen.drawRectangle(236,211,271,239);
+            do Screen.drawRectangle(280,210,317,240);
+            
+            do Screen.setColor(~color);
+            do Screen.drawRectangle(191,211,226,239);
+            do Screen.drawRectangle(235,210,272,240);
+            do Screen.drawRectangle(281,211,316,239);
         
-        do Screen.setColor(~color);
-        do Screen.drawRectangle(191,211,226,239);
-        do Screen.drawRectangle(236,211,271,239);
-        do Screen.drawRectangle(281,211,316,239);
+        }
+        if (column=2){
+            do Screen.drawRectangle(190,210,227,240);
+            do Screen.drawRectangle(235,210,272,240);
+            do Screen.drawRectangle(281,211,316,239);
+            
+            do Screen.setColor(~color);
+            do Screen.drawRectangle(191,211,226,239);
+            do Screen.drawRectangle(236,211,271,239);
+            do Screen.drawRectangle(280,210,317,240);
+        
+        }
         
         do Screen.setColor(color);
         /* LEFT ARROW */
