@@ -44,8 +44,19 @@ class Ui{
     }
 
     function void setButton(boolean color){
-        do Screen.setColor(true);
-
+        do Screen.setColor(color);
+        
+        /*按鈕框框*/
+        do Screen.drawRectangle(190,210,227,240);
+        do Screen.drawRectangle(235,210,272,240);
+        do Screen.drawRectangle(280,210,317,240);
+        
+        do Screen.setColor(~color);
+        do Screen.drawRectangle(191,211,226,239);
+        do Screen.drawRectangle(236,211,271,239);
+        do Screen.drawRectangle(281,211,316,239);
+        
+        do Screen.setColor(~color);
         /* LEFT ARROW */
         do Screen.drawRectangle(13+190,224,30+190,226);
         do Screen.drawLine(16+190,217,8+190,225);
@@ -83,5 +94,6 @@ class Ui{
         do Screen.drawLine(28+280,15+210,23+280,20+210);
         do Screen.drawPixel(27+280,15+210);
         return;
+        
     }
 }
