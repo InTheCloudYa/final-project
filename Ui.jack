@@ -23,7 +23,7 @@ class Ui{
             let col = zom.getColumn();
             let x = 190 + (Math.multiply(col,45));
             let y = 9+Math.multiply(i,25);
-            do drawDog(x,y);
+            do Ui.drawDog(x,y);
             let i = i + 1;
         }
         return;
