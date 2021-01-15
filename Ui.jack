@@ -125,6 +125,10 @@ class Ui{
     function void drawDog(int x,int y){
         do Screen.setColor(true);
         do Screen.drawRectangle(22+x,17+y,25+x,19+y);
+        do Screen.setColor(false);
+        do Screen.drawPixel(18+x,23+y);
+        do Screen.drawPixel(18+x,24+y);
+        do Screen.setColor(true);
         do Screen.drawLine(12+x,3+y,14+x,3+y);
         do Screen.drawLine(16+x,1+y,17+x,1+y);
         do Screen.drawLine(18+x,2+y,18+x,3+y);
