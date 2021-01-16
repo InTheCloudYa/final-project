@@ -174,26 +174,22 @@ class Ui{
     }
     
     function void refreshScore(int score){
-        do Screen.setColor(false);
-        do Screen.drawRectangle(408,61,471,84);
+
         do Output.moveCursor(6,52);
         do Output.printInt(score);
         return;
     }
 
     function void refreshTime(int time){
-        do Screen.setColor(false);
-        do Screen.drawRectangle(408,115,471,138);
+
         do Output.moveCursor(11,52);
         do Output.printInt(time);
         return;
     }
 
     function void refreshLevel(int level){
-        // do Screen.setColor(false);
-        // do Screen.drawRectangle(105,);
-        // do Output.moveCursor(18,13);
-        // do Output.printInt(time);
+        do Output.moveCursor(18,13);
+        do Output.printInt(level);
         return;
     }
 }
