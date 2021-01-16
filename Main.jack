@@ -10,6 +10,7 @@ class Main{
             do Ui.drawStart();
             do Ui.refreshScore(0);
             do Ui.refreshTime(30);
+            do Ui.refreshLevel(1);
             let tim = 0;
             let keyPressed = false; 
             while(~keyPressed){
