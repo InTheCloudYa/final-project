@@ -10,6 +10,9 @@ class Ui{
         do Ui.setButton(true,0);
         do Ui.setButton(true,1);
         do Ui.setButton(true,2);
+        //team name
+        do Output.moveCursor(20,45);
+        do Output.printString("In The Cloud Ya.");
         return;
     }
 
@@ -202,8 +205,10 @@ class Ui{
     }
 
     function void drawPanda(int x,int y,int level){
+        do Screen.setColor(false);
+        do Screen.drawRectangle(120,190,145,215);
+        do Screen.setColor(true);
         if (level=1){
-            do Screen.setColor(true);
             do Screen.drawRectangle(1+x,17+y,4+x,19+y);
             do Screen.drawRectangle(2+x,19+y,6+x,20+y);
             do Screen.drawRectangle(15+x,19+y,19+x,20+y);
@@ -242,15 +247,152 @@ class Ui{
             return;
         }
         if (level=2){
+            do Screen.drawPixel(18+x,1+y);
+            do Screen.drawPixel(20+x,3+y);
+            do Screen.drawPixel(5+x,7+y);
+            do Screen.drawPixel(17+x,7+y);
+            do Screen.drawPixel(4+x,15+y);
+            do Screen.drawPixel(6+x,14+y);
+            do Screen.drawPixel(13+x,11+y);
+            do Screen.drawLine(19+x,1+y,19+x,2+y);
+            do Screen.drawLine(21+x,4+y,21+x,5+y);
+            do Screen.drawLine(14+x,2+y,17+x,2+y);
+            do Screen.drawLine(11+x,3+y,13+x,3+y);
+            do Screen.drawLine(9+x,4+y,10+x,4+y);
+            do Screen.drawLine(7+x,5+y,8+x,5+y);
+            do Screen.drawLine(14+x,5+y,15+x,5+y);
+            do Screen.drawLine(4+x,8+y,4+x,9+y);
+            do Screen.drawLine(10+x,14+y,11+x,14+y);
+            do Screen.drawLine(18+x,8+y,18+x,9+y);
+            do Screen.drawLine(5+x,4+y,6+x,4+y);
+            do Screen.drawLine(16+x,4+y,17+x,4+y);
+            do Screen.drawLine(8+x,17+y,14+x,17+y);
+            do Screen.drawLine(2+x,16+y,7+x,16+y);
+            do Screen.drawLine(3+x,10+y,3+x,12+y);
+            do Screen.drawLine(7+x,11+y,8+x,11+y);
+            do Screen.drawLine(15+x,16+y,17+x,16+y);
+            do Screen.drawLine(19+x,11+y,19+x,12+y);
+            do Screen.drawLine(22+x,6+y,22+x,13+y);
+            do Screen.drawLine(21+x,12+y,21+x,13+y);
+            do Screen.drawLine(23+x,9+y,23+x,13+y);
+            do Screen.drawLine(24+x,11+y,24+x,13+y);
+            do Screen.drawLine(25+x,12+y,25+x,13+y);
+            do Screen.drawRectangle(4+x,5+y,6+x,6+y);
+            do Screen.drawRectangle(16+x,5+y,18+x,6+y);
+            do Screen.drawRectangle(1+x,13+y,3+x,15+y);
+            do Screen.drawRectangle(6+x,12+y,7+x,13+y);
+            do Screen.drawRectangle(14+x,11+y,15+x,13+y);
+            do Screen.drawRectangle(15+x,12+y,16+x,14+y);
+            do Screen.drawRectangle(18+x,15+y,21+x,16+y);
+            do Screen.drawRectangle(19+x,11+y,19+x,12+y);
             return;
         }
         if (level=3){
+            do Screen.drawRectangle(6+x,1+y,7+x,3+y);
+            do Screen.drawRectangle(18+x,1+y,19+x,3+y);
+            do Screen.drawRectangle(19+x,11+y,20+x,14+y);
+            do Screen.drawRectangle(4+x,21+y,5+x,22+y);
+            do Screen.drawRectangle(2+x,20+y,4+x,21+y);
+            do Screen.drawRectangle(1+x,18+y,3+x,20+y);
+            do Screen.drawRectangle(2+x,14+y,4+x,16+y);
+            do Screen.drawRectangle(3+x,13+y,5+x,15+y);
+            do Screen.drawRectangle(4+x,12+y,6+x,14+y);
+            do Screen.drawRectangle(7+x,12+y,18+x,13+y);
+            do Screen.drawLine(5+x,2+y,5+x,3+y);
+            do Screen.drawLine(8+x,2+y,9+x,2+y);
+            do Screen.drawLine(10+x,1+y,15+x,1+y);
+            do Screen.drawLine(16+x,2+y,17+x,2+y);
+            do Screen.drawLine(20+x,2+y,20+x,3+y);
+            do Screen.drawLine(19+x,4+y,19+x,5+y);
+            do Screen.drawLine(20+x,6+y,20+x,10+y);
+            do Screen.drawLine(21+x,14+y,21+x,20+y);
+            do Screen.drawLine(6+x,22+y,18+x,22+y);
+            do Screen.drawLine(5+x,5+y,5+x,6+y);
+            do Screen.drawLine(4+x,7+y,4+x,9+y);
+            do Screen.drawLine(5+x,11+y,7+x,11+y);
+            do Screen.drawPixel(5+x,10+y);
+            do Screen.drawPixel(3+x,17+y);
+            do Screen.drawPixel(20+x,21+y);
+            do Screen.drawPixel(20+x,15+y);
+            do Screen.drawPixel(6+x,4+y);
             return;
         }
         if (level=4){
+            let y = y +3;
+            do Screen.drawRectangle(3+x,12+y,6+x,14+y);
+            do Screen.drawRectangle(8+x,13+y,13+x,15+y);
+            do Screen.drawRectangle(5+x,8+y,7+x,9+y);
+            do Screen.drawRectangle(12+x,1+y,14+x,3+y);
+            do Screen.drawRectangle(13+x,12+y,15+x,14+y);
+            do Screen.drawRectangle(17+x,14+y,19+x,15+y);
+            do Screen.drawRectangle(13+x,8+y,14+x,9+y);
+            do Screen.drawRectangle(19+x,10+y,20+x,14+y);
+            do Screen.drawRectangle(20+x,7+y,21+x,13+y);
+            do Screen.drawRectangle(22+x,6+y,22+x,10+y);
+            do Screen.drawRectangle(14+x,3+y,15+x,4+y);
+            do Screen.drawLine(2+x,11+y,2+x,13+y);
+            do Screen.drawLine(1+x,7+y,1+x,12+y);
+            do Screen.drawLine(10+x,10+y,11+x,10+y);
+            do Screen.drawLine(6+x,7+y,8+x,7+y);
+            do Screen.drawLine(5+x,10+y,6+x,10+y);
+            do Screen.drawLine(2+x,5+y,2+x,6+y);
+            do Screen.drawLine(3+x,1+y,4+x,1+y);
+            do Screen.drawLine(2+x,2+y,6+x,2+y);
+            do Screen.drawLine(2+x,3+y,4+x,3+y);
+            do Screen.drawLine(7+x,1+y,10+x,1+y);
+            do Screen.drawLine(15+x,5+y,15+x,6+y);
+            do Screen.drawLine(16+x,6+y,16+x,12+y);
+            do Screen.drawLine(21+x,4+y,21+x,5+y);
+            do Screen.drawLine(16+x,2+y,19+x,2+y);
+            do Screen.drawLine(12+x,7+y,13+x,7+y);
+            do Screen.drawPixel(3+x,4+y);
+            do Screen.drawPixel(7+x,13+y);
+            do Screen.drawPixel(11+x,2+y);
+            do Screen.drawPixel(15+x,11+y);
+            do Screen.drawPixel(20+x,3+y);
+            do Screen.drawPixel(18+x,13+y);
+            do Screen.drawPixel(16+x,14+y);
+            do Screen.drawPixel(14+x,10+y);
             return;
         }
         else{
+            do Screen.drawRectangle(x+6,y+1,x+7,y+3);
+            do Screen.drawPixel(x+6,y+4);
+            do Screen.drawLine(x+5,y+2,x+5,y+6);
+            do Screen.drawLine(x+4,y+7,x+4,y+12);
+            do Screen.drawLine(x+6,y+12,x+10,y+12);
+            do Screen.drawPixel(x+5,y+11);
+            do Screen.drawPixel(x+10,y+12);
+            do Screen.drawPixel(x+11,y+6);
+            do Screen.drawPixel(x+18,y+9);
+            do Screen.drawPixel(x+19,y+11);
+            do Screen.drawPixel(x+16,y+2);
+            do Screen.drawPixel(x+14,y+18);
+            do Screen.drawPixel(x+5,y+19);
+            do Screen.drawLine(x+10,y+1,x+15,y+1);
+            do Screen.drawLine(x+8,y+2,x+9,y+2);
+            do Screen.drawLine(x+13,y+9,x+14,y+9);
+            do Screen.drawLine(x+20,y+7,x+20,y+10);
+            do Screen.drawRectangle(x+16,y+12,x+19,y+15);
+            do Screen.drawLine(x+3,y+13,x+3,y+14);
+            do Screen.drawLine(x+2,y+15,x+2,y+16);
+            do Screen.drawRectangle(x+17,y+1,x+18,y+2);
+            do Screen.drawRectangle(x+18,y+2,x+19,y+4);
+            do Screen.drawLine(x+19,y+5,x+19,y+6);
+            do Screen.drawLine(x+16,y+6,x+17,y+6);
+            do Screen.drawRectangle(x+17,y+7,x+18,y+8);
+            do Screen.drawRectangle(x+9,y+6,x+10,y+8);
+            do Screen.drawRectangle(x+8,y+7,x+9,y+9);
+            do Screen.drawRectangle(x+10,y+13,x+15,y+14);
+            do Screen.drawRectangle(x+1,y+17,x+3,y+19);
+            do Screen.drawRectangle(x+2,y+19,x+4,y+20);
+            do Screen.drawRectangle(x+5,y+12,x+9,y+17);
+            do Screen.drawRectangle(x+6,y+18,x+9,y+20);
+            do Screen.drawLine(x+7,y+21,x+9,y+21);
+            do Screen.drawLine(x+10,y+20,x+12,y+20);
+            do Screen.drawRectangle(x+13,y+19,x+15,y+21);
+            do Screen.drawRectangle(x+16,y+19,x+19,y+20);
+            do Screen.drawRectangle(x+15,y+16,x+18,y+18);
             return;
         }
     }
