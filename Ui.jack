@@ -101,7 +101,6 @@ class Ui{
         return;
     }
     
-    
     function void drawDog(int x,int y){
         do Screen.setColor(true);
         do Screen.drawLine(12+x,3+y,14+x,3+y);
@@ -152,5 +151,19 @@ class Ui{
         do Screen.drawPixel(12+x,10+y);
         return;
     }
+
+    function void drawScoreBoard(){
+        // do Output.moveCursor(4,53);
+        // do Output.printString("Score");
+        // do Screen.setColor(true);
+        // do Screen.drawRectangle(60,424,85,475);
+        // do Screen.setColor(false);
+        // do Screen.drawRectangle(61,425,84,474);
+        return;
+    }
     
+    function void refreshScore(){
+        //todo
+        return;
+    }
 }
