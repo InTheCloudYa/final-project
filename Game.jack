@@ -60,20 +60,20 @@ class Game{
                         do Ui.refreshScore(score);
                     }else{
                         //hit the wrong key
-                        do zom.jump();
+                        do zom.jump(time);
                         let time = time -200;
                     }
                 }
             }
             let lastKey = curKey;
             do Sys.wait(6);
-            let time = time - 1 ;
             if(Zombie.mod(time,166)=0){
                 let gameTime = time/166;
-                do refreshTime(gameTime);
+                do Ui.refreshTime(gameTime);
             }
-        return;
+            let time = time - 1 ;
         }
+        return;
     }
     method void dispose(){
         do Memory.deAlloc(this);
@@ -82,8 +82,5 @@ class Game{
 
     method int getScore(){
         return score;
-    }
-    method void refreshTime(int t){
-        return;
     }
 }
