@@ -1,9 +1,11 @@
 class Game{
     field Array zombies; 
+    field int score;
     static int rows; //constant
 
     constructor Game new(int time){
         var int i;
+        let score = 0;
         let rows = 8; //constant
         let zombies = Array.new(rows);
         let i = rows - 1 ;
@@ -24,7 +26,6 @@ class Game{
 
     method void play(){
         var int time,i,col;
-        var boolean pr; //pr=press right
         var Char lastKey,curKey,correctKey; //lk=last key
         var Zombie zom;
         let time = 5000;
@@ -53,8 +54,9 @@ class Game{
                             let zombies[i] = zombies[i-1];
                             let i = i - 1;
                         }
-                        let zombies[0] = Zombie.new(time, 8);
+                        let zombies[0] = Zombie.new(time, rows);
                         do Ui.drawZombie(zombies);
+                        let score = score + 5;
                     }else{
                         //hit the wrong key
                         do zom.jump();
@@ -72,5 +74,9 @@ class Game{
     method void dispose(){
         do Memory.deAlloc(this);
         return;
+    }
+
+    method int getScore(){
+        return score;
     }
 }
