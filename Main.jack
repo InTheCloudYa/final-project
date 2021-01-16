@@ -27,7 +27,7 @@ class Main{
             do Output.moveCursor(8,23);
             do Output.printString("Your Score is ");
             do Output.printInt(newGame.getScore());
-            do Sys.wait(5000);
+            do Sys.wait(10000);
             do newGame.dispose();
         }
         return;
