@@ -5,6 +5,7 @@ class Main{
         var Game newGame;
         var Char key;
         do Ui.drawFrame();
+        do Ui.drawScoreBoard();
         while(true){
             do Ui.drawStart();
             let tim = 0;
@@ -17,12 +18,15 @@ class Main{
                 let tim = tim + 1;
             }
             do Ui.clearWindow();
+            do Ui.drawFrame();
+            let newGame = Game.new(tim);
+            do newGame.play();
+            do Ui.clearWindow();
             do Output.moveCursor(8,23);
             do Output.printString("Your Score is ");
             do Output.printInt(newGame.getScore());
             do Sys.wait(5000);
             do newGame.dispose();
-
         }
         return;
     }
