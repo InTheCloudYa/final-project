@@ -152,18 +152,37 @@ class Ui{
         return;
     }
 
-    function void drawScoreBoard(){
-        // do Output.moveCursor(4,53);
-        // do Output.printString("Score");
-        // do Screen.setColor(true);
-        // do Screen.drawRectangle(60,424,85,475);
-        // do Screen.setColor(false);
-        // do Screen.drawRectangle(61,425,84,474);
+    function void drawBoard(){
+        //draw score board
+        do Output.moveCursor(4,51);
+        do Output.printString("Score");
+        do Screen.setColor(true);
+        do Screen.drawRectangle(407,60,472,85);
+        do Screen.setColor(false);
+        do Screen.drawRectangle(408,61,471,84);
+        //draw time board
+        do Output.moveCursor(9,51);
+        do Output.printString("Time");
+        do Screen.setColor(true);
+        do Screen.drawRectangle(407,114,472,139);
+        do Screen.setColor(false);
+        do Screen.drawRectangle(408,115,471,138);
         return;
     }
     
-    function void refreshScore(){
-        //todo
+    function void refreshScore(int score){
+        do Screen.setColor(false);
+        do Screen.drawRectangle(408,61,471,84);
+        do Output.moveCursor(6,52);
+        do Output.printInt(score);
+        return;
+    }
+
+    function void refreshTime(int time){
+        do Screen.setColor(false);
+        do Screen.drawRectangle(408,115,471,138);
+        do Output.moveCursor(11,52);
+        do Output.printInt(time);
         return;
     }
 }
