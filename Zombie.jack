@@ -15,10 +15,141 @@ class Zombie{
         return c;
     }
 
-    function int random(int t,int i){
-        let t = Math.abs(t); //todo
-        return Zombie.mod(t); //todo
+    function int random(int t , int i){
+        var int c,timekeep;
+        let t = Math.abs(t);
+        let i = 0;
+        if (i = 0) {
+            let c = Zombie.mod(t);
+            let timekeep = t;
+            return c
+        }
+        if (i = 1) {
+            if (t = timekeep) {
+                if (t < 100) {
+                    let t = Math.multiply(t,5);
+                    let t = Math.divide(t,2);
+                    let c = zombie.mod(t);
+                }
+                else {
+                    let t = Math.divide(t,2);
+                    let c = zombie.mod(t);
+                }
+            }
+            else {
+                let c = zombie.mod(t);
+            }
+        }
+
+        if (i = 2) {
+            if (t = timekeep) {
+                if (t < 100) {
+                    let t = Math.multiply(t,7);
+                    let t = Math.divide(t,2);
+                    let c = zombie.mod(t);
+                }
+                else {
+                    let t = Math.divide(t,2);
+                    let c = zombie.mod(t);
+                }
+            }
+            else {
+                let c = zombie.mod(t);
+            }
+        }
+
+        if (i = 3) {
+            if (t = timekeep) {
+                if (t < 100) {
+                    let t = Math.multiply(t,11);
+                    let t = Math.divide(t,2);
+                    let c = zombie.mod(t);
+                }
+                else {
+                    let t = Math.divide(t,2);
+                    let c = zombie.mod(t);
+                }
+            }
+            else {
+                let c = zombie.mod(t);
+            }
+        }
+
+        if (i = 4) {
+            if (t = timekeep) {
+                if (t < 100) {
+                    let t = Math.multiply(t,13);
+                    let t = Math.divide(t,2);
+                    let c = zombie.mod(t);
+                }
+                else {
+                    let t = Math.divide(t,2);
+                    let c = zombie.mod(t);
+                }
+            }
+            else {
+                let c = zombie.mod(t);
+            }
+        }
+
+        if (i = 5) {
+            if (t = timekeep) {
+                if (t < 100) {
+                    let t = Math.multiply(t,17);
+                    let t = Math.divide(t,2);
+                    let c = zombie.mod(t);
+                }
+                else {
+                    let t = Math.divide(t,2);
+                    let c = zombie.mod(t);
+                }
+            }
+            else {
+                let c = zombie.mod(t);
+            }
+        }
+
+        if (i = 6) {
+            if (t = timekeep) {
+                if (t < 100) {
+                    let t = Math.multiply(t,19);
+                    let t = Math.divide(t,2);
+                    let c = zombie.mod(t);
+                }
+                else {
+                    let t = Math.divide(t,2);
+                    let c = zombie.mod(t);
+                }
+            }
+            else {
+                let c = zombie.mod(t);
+            }
+        }
+
+        if (i = 7) {
+            if (t = timekeep) {
+                if (t < 100) {
+                    let t = Math.multiply(t,23);
+                    let t = Math.divide(t,2);
+                    let c = zombie.mod(t);
+                }
+                else {
+                    let t = Math.divide(t,2);
+                    let c = zombie.mod(t);
+                }
+            }
+            else {
+                let c = zombie.mod(t);
+            }
+        }
+        
+                  
+        
+        
+        
+        return c;
     }
+
 
     method void jump(){
         var int x,y,col;
