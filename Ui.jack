@@ -31,7 +31,7 @@ class Ui{
         return;
     }
 
-    function void clear(){
+    function void clearWindow(){
         do Screen.setColor(false);
         do Screen.drawRectangle(132,84,403,108);
         return;
@@ -40,8 +40,7 @@ class Ui{
 
 
     function void drawStart(){
-        do Screen.setColor(false);
-        do Screen.drawRectangle(132,84,403,108);
+        do Ui.clearWindow();
         do Screen.setColor(true);
         do Output.moveCursor(8,21);
         do Output.printString("Press any key to start");
