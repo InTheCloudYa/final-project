@@ -65,6 +65,7 @@ class Game{
                             let level = level + 1;
                             do Ui.refreshLevel(level);
                             let levelCounter = 0;
+                            do Ui.drawPanda(120,190,level);
                         }
                     }else{
                         //hit the wrong key
