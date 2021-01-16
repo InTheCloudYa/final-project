@@ -17,7 +17,7 @@ class Ui{
         var int i,x,y,col;
         var Zombie zom; 
         do Screen.setColor(false);
-        do Screen.drawRectangle(188,10,321,210);
+        do Screen.drawRectangle(188,10,321,209);
         do Screen.setColor(true);
         let i = 0;
         while(i < 8){
