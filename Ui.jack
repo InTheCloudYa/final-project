@@ -167,6 +167,9 @@ class Ui{
         do Screen.drawRectangle(407,114,472,139);
         do Screen.setColor(false);
         do Screen.drawRectangle(408,115,471,138);
+        //draw level
+        do Output.moveCursor(18,7);
+        do Output.printString("LEVEL");
         return;
     }
     
@@ -183,6 +186,14 @@ class Ui{
         do Screen.drawRectangle(408,115,471,138);
         do Output.moveCursor(11,52);
         do Output.printInt(time);
+        return;
+    }
+
+    function void refreshLevel(int level){
+        // do Screen.setColor(false);
+        // do Screen.drawRectangle(105,);
+        // do Output.moveCursor(18,13);
+        // do Output.printInt(time);
         return;
     }
 }
