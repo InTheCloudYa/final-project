@@ -57,6 +57,7 @@ class Game{
                         let zombies[0] = Zombie.new(time, rows);
                         do Ui.drawZombie(zombies);
                         let score = score + 5;
+                        do Ui.refreshScore(score);
                     }else{
                         //hit the wrong key
                         do zom.jump();
