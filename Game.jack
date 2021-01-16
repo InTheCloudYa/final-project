@@ -1,11 +1,12 @@
 class Game{
     field Array zombies; 
-    field int score,gameTime;
+    field int score,gameTime,level,levelCounter;
     static int rows; //constant
 
     constructor Game new(int time){
         var int i;
         let score = 0;
+        let level = 1;
         let rows = 8; //constant
         let zombies = Array.new(rows);
         let i = rows - 1 ;
@@ -25,7 +26,7 @@ class Game{
     }
 
     method void play(){
-        var int time,i,col;
+        var int time,i,col,angryTime;
         var Char lastKey,curKey,correctKey; 
         var Zombie zom;
         let time = 4980;
@@ -57,21 +58,41 @@ class Game{
                         let zombies[0] = Zombie.new(time, rows);
                         do Ui.drawZombie(zombies);
                         let score = score + 5;
+                        let levelCounter = levelCounter + 1;
                         do Ui.refreshScore(score);
+                        //check if level up(levelCounter =240)
+                        if(levelCounter = 48){
+                            let level + 1;
+                            do Ui.refreshLevel(level);
+                            let levelCounter = 0;
+                        }
                     }else{
                         //hit the wrong key
-                        do zom.jump(time);
-                        let time = time -200;
+                        // do zom.jump(time);
+                        // let time = time -200;
+                        do zom.angry();
+                        let angryTime = 100;
+                        while(angryTime>0){
+                            let time = time -1;
+                            if(Zombie.mod(time,166)=0){
+                                let gameTime = time/166;
+                                do Ui.refreshTime(gameTime);
+                            }
+                            let angryTime = angryTime - 1;
+                            do Sys.wait(6);
+                        }
+                        do zom.unangry();
                     }
                 }
             }
             let lastKey = curKey;
             do Sys.wait(6);
+            let time = time - 1 ;
             if(Zombie.mod(time,166)=0){
                 let gameTime = time/166;
                 do Ui.refreshTime(gameTime);
             }
-            let time = time - 1 ;
+            
         }
         return;
     }
