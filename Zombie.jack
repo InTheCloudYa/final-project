@@ -4,18 +4,17 @@ class Zombie{
     constructor Zombie new(int time,int i){
         let range = 3;
         if (i = 8){
-            let column = Zombie.mod(time);
+            let column = Zombie.mod(time,range);
         }
         else {let column = Zombie.random(time,i);}
         return this;
     }
 
-    function int mod(int x){
-        var int a,b,c;
+    function int mod(int x,int y){
+        var int a,b,c,y;
         let x = Math.abs(x);
-        
-        let a = Math.divide(x,range);
-        let b = Math.multiply(a,range);
+        let a = Math.divide(x,y);
+        let b = Math.multiply(a,y);
         let c = x - b;
         return c;
     }
@@ -28,7 +27,7 @@ class Zombie{
             if ( t < 10 ) {
                 let t = Math.multiply( t , 7 );
             }
-            let randoms[a]= Zombie.mod( t );
+            let randoms[a]= Zombie.mod(t,range);
             let t = Math.divide( t , 2 );
             let a = a + 1;
             
