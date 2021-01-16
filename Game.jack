@@ -7,15 +7,6 @@ class Game{
         let rows = 8; //constant
         let zombies = Array.new(rows);
         let i = rows - 1 ;
-        while((i > 0)class Game{
-    field Array zombies; 
-    static int rows; //constant
-
-    constructor Game new(int time){
-        var int i;
-        let rows = 8; //constant
-        let zombies = Array.new(rows);
-        let i = rows - 1 ;
         while((i > 0) | (i = 0)){
             let zombies[i] = Zombie.new(time,i);
             let i = i - 1;
@@ -36,12 +27,12 @@ class Game{
         var boolean pr; //pr=press right
         var Char lastKey,curKey,correctKey; //lk=last key
         var Zombie zom;
-        let time = 10000;
-        let i = rows-1;
+        let time = 5000;
         let lastKey = 0;
         //fix bug: angry right after start
-        do Sys.wait(5);
+        do Sys.wait(300);
         while (time > 0){
+            let i = rows-1;
             let curKey = Keyboard.keyPressed();
             if(~(curKey=lastKey)){
                 //not continuous
@@ -58,12 +49,11 @@ class Game{
                         //hit the right key
                         //shift zombie
                         while (i>0){
-                            //do zom.disposeColumn();
-                            //do zom.dispose(); //!!!
+                            do zom.dispose(); //!!!
                             let zombies[i] = zombies[i-1];
                             let i = i - 1;
-                            let zombies[0] = Zombie.new(time, 8);
                         }
+                        let zombies[0] = Zombie.new(time, 8);
                         do Ui.drawZombie(zombies);
                     }else{
                         //hit the wrong key
@@ -73,74 +63,12 @@ class Game{
                 }
             }
             let lastKey = curKey;
-            do Sys.wait(3);
+            do Sys.wait(6);
             let time = time - 1 ;
         }
         return;
     }
 
-    method void dispose(){
-        do Memory.deAlloc(this);
-        return;
-    }
-}
- | (i = 0)){
-            let zombies[i] = Zombie.new(time,i);
-            let i = i - 1;
-        }
-
-        do Ui.drawZombie(zombies);
-        return this;
-    }
-    function boolean pressRight(Char p,int i,int time,Zombie zom){
-        var Char key;
-        let key = Keyboard.keyPressed();
-        if (key > 0){
-        
-            if (key=130){do Ui.setButton(false,0);}else{do Ui.setButton(true,0);}
-            if (key=133){do Ui.setButton(false,1);}else{do Ui.setButton(true,1);}
-            if (key=132){do Ui.setButton(false,2);}else{do Ui.setButton(true,2);}
-            
-            if ((~(p=key)) & ((i = 1 & key = 130) | (i = 2 & key = 133) | (i = 3 & key = 132))) { 
-                return true;
-            }
-            else { 
-                do zom.jump();
-                let time = time - 200;
-                return false;
-            }
-        }
-        else { return false; }
-    }
-    method void play(){
-        var int time,i,ls,col; //ls=last second
-        var boolean pr; //pr=press right
-        var Char lk; //lk=last key
-        var Zombie zom;
-        let time = 10000;
-        let i = rows-1;
-        let lk = 0;
-        while (time > 0){
-            let zom = zombies[rows-1];
-            let col = zom.getColumn();
-            let pr = Game.pressRight(lk,col,time,zom);
-            if (pr){
-                while (i>0){
-                    do zom.disposeColumn();
-                    do zom.dispose(); //!!!
-                    let zombies[i] = zombies[i-1];
-                    let i = i - 1;
-                    let zombies[0] = Zombie.new(time,0);
-                }
-                do Ui.clear();
-                do Ui.drawZombie(zombies);
-            }
-            let lk = Keyboard.keyPressed();
-            do Sys.wait(3);
-            let time = time - 1 ;
-        }
-        return;
-    }
     method void dispose(){
         do Memory.deAlloc(this);
         return;
