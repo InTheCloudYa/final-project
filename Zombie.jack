@@ -66,7 +66,7 @@ class Zombie{
         return;
     }
 
-    method void unangry(){
+    method void unangry(int level){
         var int x,y,col,i;
         let i = 100;
         let col = getColumn();
@@ -74,7 +74,7 @@ class Zombie{
         let y=210-26;
         do Screen.setColor(false);
         do Screen.drawRectangle(x,y,x+37,y+24);
-        do Ui.drawDog(x,y);
+        do Ui.drawDog(x,y,level);
         return;
     }
     
