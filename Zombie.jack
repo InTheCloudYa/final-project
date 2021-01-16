@@ -21,7 +21,19 @@ class Zombie{
     }
 
     function int random(int t , int i){
-        return Zombie.mod(t);
+        var int a,timekeep;
+        var Array randoms;
+        let randoms = Array.new(8);
+        while ( a < 8 ) {
+            if ( t < 10 ) {
+                let t = Math.multiply( t , 7 );
+            }
+            let randoms[a]= Zombie.mod( t );
+            let t = Math.divide( t , 2 );
+            let a = a + 1;
+            
+        }
+        return randoms[i];
     }
 
     method void jump(){
