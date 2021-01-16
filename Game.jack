@@ -1,6 +1,6 @@
 class Game{
     field Array zombies; 
-    field int score;
+    field int score,gameTime;
     static int rows; //constant
 
     constructor Game new(int time){
@@ -28,7 +28,7 @@ class Game{
         var int time,i,col;
         var Char lastKey,curKey,correctKey; 
         var Zombie zom;
-        let time = 5000;
+        let time = 4980;
         let lastKey = 0;
         //fix bug: angry right after start
         do Sys.wait(300);
@@ -68,10 +68,13 @@ class Game{
             let lastKey = curKey;
             do Sys.wait(6);
             let time = time - 1 ;
-        }
+            if(Zombie.mod(time,166)=0){
+                let gameTime = time/166;
+                do refreshTime(gameTime);
+            }
         return;
+        }
     }
-
     method void dispose(){
         do Memory.deAlloc(this);
         return;
@@ -79,5 +82,8 @@ class Game{
 
     method int getScore(){
         return score;
+    }
+    method void refreshTime(int t){
+        return;
     }
 }
