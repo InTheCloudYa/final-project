@@ -162,8 +162,8 @@ class Zombie{
         do Screen.setColor(true);
         do Screen.drawRectangle(22+x,17+y,25+x,19+y);
         do Screen.setColor(false);
-        do Screen.drawPixel(18+x,23+y);
-        do Screen.drawPixel(18+x,24+y);
+        do Screen.drawPixel(23+x,18+y);
+        do Screen.drawPixel(24+x,18+y);
         do Screen.setColor(true);
         do Screen.drawLine(12+x,3+y,14+x,3+y);
         do Screen.drawLine(16+x,1+y,17+x,1+y);
@@ -208,11 +208,11 @@ class Zombie{
         do Screen.drawLine(25+x,9+y,25+x,10+y);
         do Screen.drawLine(23+x,12+y,25+x,13+y);
         do Screen.drawPixel(10+x,7+y);
-        do Screen.drawPixel(1+x,7+y);
+        do Screen.drawPixel(14+x,7+y);
         do Screen.drawPixel(12+x,10+y);
         do Screen.drawPixel(9+x,12+y);
         do Screen.drawPixel(16+x,12+y);
-        do Screen.drawPixel(10+x,22+y);
+        do Screen.drawPixel(22+x,10+y);
         do Screen.drawPixel(26+x,10+y);
         do Screen.drawPixel(26+x,12+y);
         do Screen.drawPixel(22+x,12+y);
