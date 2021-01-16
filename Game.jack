@@ -53,7 +53,7 @@ class Game{
                     do zom.dispose(); //!!!
                     let zombies[i] = zombies[i-1];
                     let i = i - 1;
-                    let zombies[0] = Zombie.new(time);
+                    let zombies[0] = Zombie.new(time,0);
                 }
                 do Ui.clear();
                 do Ui.drawZombie(zombies);
