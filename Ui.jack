@@ -180,7 +180,8 @@ class Ui{
     }
     
     function void refreshScore(int score){
-
+        do Screen.setColor(false);
+        do Screen.drawRectangle(408,61,471,84);
         do Output.moveCursor(6,52);
         do Output.printInt(score);
         return;
