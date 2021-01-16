@@ -35,8 +35,8 @@ class Zombie{
         return randoms[i];
     }
 
-    method void jump(int time){
-        var int x,y,col,i,gt;
+    method void angry(){
+        var int x,y,col,i;
         let i = 100;
         let col = getColumn();
         let x= 190 + (col*45);
@@ -63,19 +63,15 @@ class Zombie{
         do Screen.drawPixel(26+x,12+y);
         do Screen.drawPixel(23+x,13+y);
         do Screen.drawLine(22+x,12+y,23+x,12+y);
+        return;
+    }
 
-        //do Sys.wait(600);
-        while(i>0){
-            if(Zombie.mod(time,166)=0){
-                let gt = time/166;
-                do Ui.refreshTime(gt);
-            }
-            let time = time -1;
-            let i = i -1;
-            do Sys.wait(6);
-        }
-
-        //clear
+    method void unangry(){
+        var int x,y,col,i;
+        let i = 100;
+        let col = getColumn();
+        let x= 190 + (col*45);
+        let y=210-26;
         do Screen.setColor(false);
         do Screen.drawRectangle(x,y,x+37,y+24);
         do Ui.drawDog(x,y);
