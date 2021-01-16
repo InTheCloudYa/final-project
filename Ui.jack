@@ -175,13 +175,12 @@ class Ui{
         //draw level
         do Output.moveCursor(18,7);
         do Output.printString("LEVEL");
-        do Ui.levelOnePanda(120,190);
+        do Ui.drawPanda(120,190,1);
         return;
     }
     
     function void refreshScore(int score){
-        do Screen.setColor(false);
-        do Screen.drawRectangle(408,61,471,84);
+
         do Output.moveCursor(6,52);
         do Output.printInt(score);
         return;
@@ -201,43 +200,57 @@ class Ui{
         return;
     }
 
-    function void levelOnePanda(int x,int y){
-        do Screen.setColor(true);
-        do Screen.drawRectangle(1+x,17+y,4+x,19+y);
-        do Screen.drawRectangle(2+x,19+y,6+x,20+y);
-        do Screen.drawRectangle(15+x,19+y,19+x,20+y);
-        do Screen.drawRectangle(17+x,17+y,20+x,19+y);
-        do Screen.drawRectangle(8+x,1+y,13+x,1+y);
-        do Screen.drawRectangle(4+x,1+y,5+x,3+y);
-        do Screen.drawRectangle(16+x,1+y,17+x,3+y);
-        do Screen.drawRectangle(6+x,7+y,7+x,9+y);
-        do Screen.drawRectangle(13+x,7+y,14+x,9+y);
-        do Screen.drawRectangle(14+x,8+y,15+x,10+y);
-        do Screen.drawRectangle(5+x,8+y,6+x,10+y);
-        do Screen.drawRectangle(4+x,12+y,7+x,13+y);
-        do Screen.drawRectangle(5+x,14+y,8+x,15+y);
-        do Screen.drawRectangle(6+x,15+y,9+x,16+y);
-        do Screen.drawRectangle(12+x,15+y,15+x,16+y);
-        do Screen.drawRectangle(13+x,14+y,16+x,15+y);
-        do Screen.drawRectangle(14+x,12+y,17+x,13+y);
-        do Screen.drawLine(7+x,20+y,17+x,20+y);
-        do Screen.drawLine(3+x,2+y,3+x,3+y);
-        do Screen.drawLine(6+x,2+y,7+x,2+y);
-        do Screen.drawLine(3+x,5+y,3+x,6+y);
-        do Screen.drawLine(2+x,7+y,2+x,10+y);
-        do Screen.drawLine(10+x,10+y,11+x,10+y);
-        do Screen.drawLine(18+x,5+y,18+x,6+y);
-        do Screen.drawLine(18+x,14+y,18+x,16+y);
-        do Screen.drawLine(3+x,14+y,3+x,16+y);
-        do Screen.drawLine(19+x,7+y,19+x,10+y);
-        do Screen.drawLine(18+x,2+y,18+x,3+y);
-        do Screen.drawLine(14+x,2+y,15+x,2+y);
-        do Screen.drawPixel(4+x,4+y);
-        do Screen.drawPixel(3+x,11+y);
-        do Screen.drawPixel(18+x,11+y);
-        do Screen.drawPixel(17+x,4+y);
-        do Screen.drawPixel(12+x,7+y);
-        do Screen.drawPixel(8+x,7+y);
-        return;
+    function void drawPanda(int x,int y,int level){
+        if (level=1){
+            do Screen.setColor(true);
+            do Screen.drawRectangle(1+x,17+y,4+x,19+y);
+            do Screen.drawRectangle(2+x,19+y,6+x,20+y);
+            do Screen.drawRectangle(15+x,19+y,19+x,20+y);
+            do Screen.drawRectangle(17+x,17+y,20+x,19+y);
+            do Screen.drawRectangle(8+x,1+y,13+x,1+y);
+            do Screen.drawRectangle(4+x,1+y,5+x,3+y);
+            do Screen.drawRectangle(16+x,1+y,17+x,3+y);
+            do Screen.drawRectangle(6+x,7+y,7+x,9+y);
+            do Screen.drawRectangle(13+x,7+y,14+x,9+y);
+            do Screen.drawRectangle(14+x,8+y,15+x,10+y);
+            do Screen.drawRectangle(5+x,8+y,6+x,10+y);
+            do Screen.drawRectangle(4+x,12+y,7+x,13+y);
+            do Screen.drawRectangle(5+x,14+y,8+x,15+y);
+            do Screen.drawRectangle(6+x,15+y,9+x,16+y);
+            do Screen.drawRectangle(12+x,15+y,15+x,16+y);
+            do Screen.drawRectangle(13+x,14+y,16+x,15+y);
+            do Screen.drawRectangle(14+x,12+y,17+x,13+y);
+            do Screen.drawLine(7+x,20+y,17+x,20+y);
+            do Screen.drawLine(3+x,2+y,3+x,3+y);
+            do Screen.drawLine(6+x,2+y,7+x,2+y);
+            do Screen.drawLine(3+x,5+y,3+x,6+y);
+            do Screen.drawLine(2+x,7+y,2+x,10+y);
+            do Screen.drawLine(10+x,10+y,11+x,10+y);
+            do Screen.drawLine(18+x,5+y,18+x,6+y);
+            do Screen.drawLine(18+x,14+y,18+x,16+y);
+            do Screen.drawLine(3+x,14+y,3+x,16+y);
+            do Screen.drawLine(19+x,7+y,19+x,10+y);
+            do Screen.drawLine(18+x,2+y,18+x,3+y);
+            do Screen.drawLine(14+x,2+y,15+x,2+y);
+            do Screen.drawPixel(4+x,4+y);
+            do Screen.drawPixel(3+x,11+y);
+            do Screen.drawPixel(18+x,11+y);
+            do Screen.drawPixel(17+x,4+y);
+            do Screen.drawPixel(12+x,7+y);
+            do Screen.drawPixel(8+x,7+y);
+            return;
+        }
+        if (level=2){
+            return;
+        }
+        if (level=3){
+            return;
+        }
+        if (level=4){
+            return;
+        }
+        else{
+            return;
+        }
     }
 }
