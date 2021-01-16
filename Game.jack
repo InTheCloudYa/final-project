@@ -26,7 +26,7 @@ class Game{
 
     method void play(){
         var int time,i,col;
-        var Char lastKey,curKey,correctKey; //lk=last key
+        var Char lastKey,curKey,correctKey; 
         var Zombie zom;
         let time = 5000;
         let lastKey = 0;
