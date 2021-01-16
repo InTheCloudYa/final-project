@@ -37,6 +37,8 @@ class Ui{
         return;
     }
 
+
+
     function void drawStart(){
         do Screen.setColor(false);
         do Screen.drawRectangle(132,84,403,108);
@@ -104,8 +106,8 @@ class Ui{
         do Screen.setColor(true);
         do Screen.drawRectangle(22+x,17+y,25+x,19+y);
         do Screen.setColor(false);
-        do Screen.drawPixel(18+x,23+y);
-        do Screen.drawPixel(18+x,24+y);
+        do Screen.drawPixel(23+x,18+y);
+        do Screen.drawPixel(24+x,18+y);
         do Screen.setColor(true);
         do Screen.drawLine(12+x,3+y,14+x,3+y);
         do Screen.drawLine(16+x,1+y,17+x,1+y);
