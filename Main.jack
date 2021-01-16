@@ -16,7 +16,7 @@ class Main{
                 } 
                 let tim = tim + 1;
             }
-            do Ui.clear();
+            do Ui.clearWindow();
             do Ui.drawFrame();
             let newGame = Game.new(tim);
             do newGame.play();
