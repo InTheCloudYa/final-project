@@ -53,7 +53,7 @@ class Zombie{
         do Screen.drawLine(9+x,11+y,15+x,11+y);
         do Screen.drawLine(23+x,9+y,23+x,10+y);
         do Screen.drawLine(25+x,9+y,25+x,10+y);
-        do Screen.drawLine(23+x,12+y,25+x,13+y);
+        do Screen.drawLine(25+x,12+y,25+x,13+y);
         do Screen.drawPixel(10+x,7+y);
         do Screen.drawPixel(14+x,7+y);
         do Screen.drawPixel(12+x,10+y);
@@ -61,7 +61,9 @@ class Zombie{
         do Screen.drawPixel(22+x,10+y);
         do Screen.drawPixel(26+x,10+y);
         do Screen.drawPixel(26+x,12+y);
-        do Screen.drawPixel(22+x,12+y);
+        do Screen.drawPixel(23+x,13+y);
+        do Screen.drawLine(22+x,12+y,23+x,12+y);
+
         do Sys.wait(600);
         //clear
         do Screen.setColor(false);
