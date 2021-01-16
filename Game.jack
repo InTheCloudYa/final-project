@@ -57,7 +57,7 @@ class Game{
                         }
                         let zombies[0] = Zombie.new(time, rows);
                         do Ui.drawZombie(zombies,level);
-                        let score = score + 5;
+                        let score = score + (5*level);
                         let levelCounter = levelCounter + 1;
                         do Ui.refreshScore(score);
                         //check if level up(levelCounter =240)
