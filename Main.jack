@@ -5,9 +5,11 @@ class Main{
         var Game newGame;
         var Char key;
         do Ui.drawFrame();
-        do Ui.drawScoreBoard();
+        do Ui.drawBoard();
         while(true){
             do Ui.drawStart();
+            do Ui.refreshScore(0);
+            do Ui.refreshTime(30);
             let tim = 0;
             let keyPressed = false; 
             while(~keyPressed){
