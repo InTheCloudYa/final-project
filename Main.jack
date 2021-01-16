@@ -5,7 +5,7 @@ class Main{
         var Game newGame;
         var Char key;
         do Ui.drawFrame();
-        //while(true){
+        while(true){
             do Ui.drawStart();
             let tim = 0;
             let keyPressed = false; 
@@ -22,7 +22,7 @@ class Main{
             do newGame.play();
             do newGame.dispose();
 
-        //}
+        }
         return;
     }
 }
